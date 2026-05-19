@@ -3,15 +3,9 @@ Project Data Warehouse analisis keterlambatan, kapasitas penumpang, dan rute mas
 # Global Flight Analytics
 
 ## Deskripsi Project
-Project ini bertujuan membangun sistem Data Warehouse berbasis penerbangan global untuk melakukan analisis:
-- Keterlambatan penerbangan
-- Kepadatan trafik udara
-- Aktivitas maskapai
-- Rute penerbangan
-- Distribusi aktivitas bandara global
+Project ini bertujuan membangun sistem Data Warehouse berbasis data penerbangan global menggunakan OpenSky Network API untuk mendukung proses analisis lalu lintas udara secara multidimensi. Sistem dirancang untuk mengintegrasikan data penerbangan real-time ke dalam penyimpanan data historis yang terstruktur sehingga dapat digunakan dalam proses OLAP dan visualisasi dashboard interaktif. Melalui proses ETL (Extract, Transform, Load), data penerbangan yang diperoleh dari OpenSky API akan dibersihkan, distandarisasi, dan disimpan ke PostgreSQL Data Warehouse menggunakan pendekatan Star Schema. Selanjutnya, data dianalisis menggunakan Atoti OLAP Cube untuk menghasilkan insight terkait keterlambatan penerbangan, kepadatan trafik udara, aktivitas maskapai, distribusi aktivitas bandara, serta pola rute penerbangan global.
 
 Data diperoleh dari OpenSky Network API yang menyediakan data penerbangan secara real-time dalam format JSON.
-
 ## Dataset / API
 OpenSky Network States API:
 https://opensky-network.org/api/states/all
